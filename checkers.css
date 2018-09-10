@@ -1,0 +1,72 @@
+/* CSS for the pieces on the board */
+.piece {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 75%;
+  width: 75%;
+  border-radius: 100%;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.piece.black {
+  background-color: #444444;
+  box-shadow: 2px 2px 5px #888888;
+}
+.piece.red {
+  background-color: #FF3333;
+  box-shadow: 2px 2px 5px #888888;
+}
+.piece:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+/* CSS for the text (K) inside the pieces */
+.piece p {
+  font-size: large;
+  text-align: center;
+}
+.piece.black p {
+  color: #FFFFFF;
+}
+.piece.red p {
+  color: #000000;
+}
+
+/* CSS for the squares on the board */
+.square {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+.square.red {
+  background-color: #FF0000;
+}
+.square.black {
+  background-color: #000000;
+}
+.square.highlight {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  cursor: pointer;
+}
+
+/* CSS for the board itself */
+.board {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  box-shadow: 5px 5px 10px #888888;
+}
+
+/* The container for the game */
+.game {
+  height: 500px;
+  width: 500px;
+}
